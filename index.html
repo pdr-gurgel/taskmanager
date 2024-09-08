@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Rotina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gerenciador de Rotina</h1>
+        </header>
+        <main>
+            <section class="task-form">
+                <h2>Adicionar Tarefa</h2>
+                <form id="taskForm">
+                    <input type="text" id="taskInput" placeholder="Digite sua tarefa..." required>
+                    <select id="taskCategory">
+                        <option value="personal">Pessoal</option>
+                        <option value="work">Trabalho</option>
+                        <option value="study">Estudo</option>
+                    </select>
+                    <input type="date" id="taskDeadline">
+                    <label>
+                        <input type="checkbox" id="taskRepetitive"> Repetitivo
+                    </label>
+                    <button type="submit">Adicionar</button>
+                </form>
+            </section>
+
+            <section class="task-filters">
+                <h2>Filtros</h2>
+                <label>
+                    <input type="radio" name="filter" value="all" checked> Todos
+                </label>
+                <label>
+                    <input type="radio" name="filter" value="personal"> Pessoal
+                </label>
+                <label>
+                    <input type="radio" name="filter" value="work"> Trabalho
+                </label>
+                <label>
+                    <input type="radio" name="filter" value="study"> Estudo
+                </label>
+            </section>
+
+            <section class="task-list">
+                <h2>Tarefas</h2>
+                <ul id="taskList"></ul>
+            </section>
+
+            <section class="progress">
+                <h2>Progresso</h2>
+                <div id="progressContainer">
+                    <div id="progressBar"></div>
+                </div>
+                <p id="progressMessage">Adicione suas tarefas para ver o progresso.</p>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
