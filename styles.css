@@ -1,0 +1,160 @@
+/* styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4169E1;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-form,
+.task-filters,
+.task-list,
+.progress {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.task-form h2,
+.task-filters h2,
+.task-list h2,
+.progress h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #4169E1;
+}
+
+.task-form input[type="text"] {
+    width: calc(100% - 140px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.task-form select,
+.task-form input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.task-form label {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.task-form button {
+    padding: 10px;
+    border: none;
+    background-color: #4169E1;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.task-form button:hover {
+    background-color: #365ac5;
+}
+
+.task-filters label {
+    margin-right: 15px;
+}
+
+.task-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task-list button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-list button:hover {
+    background-color: #e04343;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#progressContainer {
+    width: 100%;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#progressBar {
+    height: 100%;
+    background-color: #4169E1;
+    width: 0%; /* Será ajustado com JavaScript */
+    transition: width 0.5s ease;
+}
+
+#progressMessage {
+    font-size: 1.2em;
+    color: #333;
+}
